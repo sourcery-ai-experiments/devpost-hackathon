@@ -1,0 +1,103 @@
+:root {
+	--prim-color: rgb(73, 3, 165); /* Primary color */
+	--sec-color: rgb(36, 1, 82); /* Secondary color - darker shade of primary */
+	--tert-color: rgb(
+		146,
+		72,
+		204
+	); /* Tertiary color - lighter shade of primary */
+	--quart-color: rgb(182, 141, 217); /* Quaternary color - tint of primary */
+	--font-color: rgb(231, 231, 231);
+	--fady-back-color: rgb(36, 1, 82, 0.2); /* Faded background color */
+}
+
+/********************Default styles******************/
+* {
+	padding: 0;
+	margin: 0;
+}
+
+body {
+	/* font-family: 'Poppins', sans-serif; */
+	background-color: var(--font-color);
+	color: var(--font-color);
+}
+
+a {
+	text-decoration: none;
+	color: var(--font-color);
+}
+
+li {
+	list-style: none;
+}
+
+button {
+	padding: 10px;
+	width: fit-content;
+	margin: 20px auto;
+	background-color: var(--prim-color);
+	border: none;
+	border-radius: 10px;
+	font-size: 17px;
+	color: var(--font-color);
+	box-shadow: 1px 1px 5px 0 var(--font-color);
+	text-wrap: nowrap;
+}
+
+button:hover {
+	background-color: var(--sec-color);
+}
+/***********************************************/
+
+.landing-overlay {
+	display: flex;
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	background-color: rgba(0, 0, 0, 0.527);
+	z-index: 1;
+	backdrop-filter: blur(3px);
+}
+
+.landing-content {
+	display: flex;
+	position: absolute;
+	background: var(--sec-color);
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	z-index: 2;
+	overflow: hidden;
+	max-width: 400px;
+	border-radius: 20px;
+	flex-direction: column;
+	text-align: center;
+	padding: 20px;
+	color: var(--font-color);
+	gap: 10px;
+	justify-content: center;
+}
+
+.landing-content h1 {
+	font-size: 35px;
+	border-bottom: 1px solid var(--prim-color);
+	width: fit-content;
+	margin: auto;
+	color: var(--tert-color);
+}
+
+.landing-content img {
+	max-width: 90%;
+	margin: 10px auto;
+	background-color: var(--font-color);
+	padding: 5px;
+	border-radius: 20px;
+}
+
+.landing-content .overlay-buttons {
+	display: flex;
+	justify-content: space-evenly;
+	margin: auto;
+	gap: 20px;
+}
